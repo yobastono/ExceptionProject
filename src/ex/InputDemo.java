@@ -6,7 +6,9 @@
 package ex;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 /**
  *
@@ -16,7 +18,8 @@ import java.io.InputStreamReader;
 // Try with resource
 public class InputDemo {
     
-    public static void main(String[]args) throws Exception{
+    // the throws just for suppressing and not for handler ther error
+    public static void main(String[]args) throws IOException, SQLException{
         
         try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))){
             String str = "";

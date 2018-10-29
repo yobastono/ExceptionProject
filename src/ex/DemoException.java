@@ -33,7 +33,10 @@ public class DemoException {
         System.out.println("Enter a number");
 
         j = Integer.parseInt(br.readLine());
-        k = i / j;
+        k = i + j;
+        if (k < 10){
+            throw new ArithmeticException();
+        }
         System.out.println("Output is: " + k);
         //System.out.println("BYE");
         
@@ -49,7 +52,7 @@ public class DemoException {
             System.out.println("Some IO Error");
         }
         catch(ArithmeticException e){
-            System.out.println("cannot divide by zero " + e);
+            System.out.println("Minimum value for the output is 10 " + e);
         }
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println("Maximum number of values is 4");
