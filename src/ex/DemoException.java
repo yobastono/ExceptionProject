@@ -29,9 +29,13 @@ public class DemoException {
         i = 8;
         j = 2;
         try{
-            
+        
+        System.out.println("Enter a number");
+
         j = Integer.parseInt(br.readLine());
         k = i / j;
+        System.out.println("Output is: " + k);
+        //System.out.println("BYE");
         
         for (int c = 0; c < 4; c++){
             a[c] = c + 1;
@@ -52,6 +56,10 @@ public class DemoException {
         }
         catch(Exception e){
             System.out.println("Uknown Exception");
+        }
+        finally{
+            System.out.println("BYE");
+            // br.close(); -> just throws another exception
         }
         System.out.println(k);
     }
